@@ -27,7 +27,9 @@ var console = {
     error: function (input) {
         alert(input);
     }
-}
+};
+
+var Module = {};
 
 var app = {
     // Application Constructor
@@ -56,16 +58,19 @@ var app = {
     },
 
     asmJSLoad: function() {
-        var script = document.createElement('script');
-        script.src = "main.js";
-        script.onload = function () {
-            alert("Emscripten boilerplate loaded.")
-        }
-        document.body.appendChild(script);
+        fetch('main.js').then(() => {
+            var script = document.createElement('script');
+            script.src = "main.js";
+            script.onload = () => {
+                alert("Emscripten boilerplate loaded.")
+            }
+            document.body.appendChild(script);
+            alert('loading main.js');
+        })
 
         var button = document.getElementById("run-wasm");
         button.addEventListener("click", function (e) {
-            alert('click');
+            alert(Module._add_one(Module._add_integers(1, 11)));
         }); 
     }
 };
