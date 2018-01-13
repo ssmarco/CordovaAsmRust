@@ -23,6 +23,9 @@ var console = {
     },
     warn: function(input) {
         alert(input);
+    },
+    error: function (input) {
+        alert(input);
     }
 }
 
