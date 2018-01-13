@@ -1,0 +1,52 @@
+# ignore cache folder
+/silverstripe-cache/
+/platforms/
+/plugins/
+/hooks/
+# ignore all environment files
+_ss_environment.php
+
+# ignore build tools
+/tools/phing-metadata
+
+# ignore composer vendor folder
+/vendor/
+
+.settings
+.idea
+.DS_store
+
+/assets/
+/cms/
+/framework/
+/gridfield-bulk-editing-tools/
+/gridfieldextensions/
+/reports/
+/secureassets/
+/segment-field/
+/userforms/
+/siteconfig/
+/node_modules/
+/googleanalytics/
+/googlesitemaps/
+/sortablegridfield/
+/display_logic/
+/contentreview/
+/queuedjobs/
+/multivaluefield/
+/betterbuttons/
+/versionedfiles/
+/sitewidecontent-report/
+/misdirection/
+/crontask/
+/silverstripe-dynamodb/
+/fulltextsearch/
+/fulltextsearch-localsolr/
+/lumberjack/
+/linkable/
+
+.sass-cache/
+.solr/
+
+/nocaptcha/
+/spamprotection/
