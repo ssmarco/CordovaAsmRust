@@ -12,5 +12,6 @@ extern { fn emscripten_exit_with_live_runtime(); }
 
 fn main() {
     println!("Hello RustC!");
+    println!("{}", add_one(add_integers(1,2)));
     unsafe { emscripten_exit_with_live_runtime(); }
 }
